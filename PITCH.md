@@ -1,28 +1,46 @@
-# RailSaathi — project pitch
+# RailSaathi — hackathon pitch
 
-## One sentence
+## 30-second pitch
 
-RailSaathi turns the confusing parts of a train ticket into a clear, private trip card that passengers can keep on their phone, even when the network disappears.
+RailSaathi is a private, offline-first trip companion for train passengers. It keeps the details already on a passenger's ticket—boarding station, destination, coach, berth, and departure—in one readable card that stays on their phone. The demo also explains a common berth layout. It is useful without handing a PNR to an unverified service, and it never pretends to know a train's live position when no authorized feed is connected.
+
+## 60-second pitch in Hinglish
+
+“Station par jaldi mein passenger ko apni boarding station, destination, coach aur berth dobara dhoondhni padti hai—aur network bhi weak ho sakta hai. RailSaathi in details ko ek simple trip card mein rakhta hai, jo isi phone par save rehta hai aur pehli baar load hone ke baad offline bhi khul sakta hai. Passenger apna trip add, edit, share ya delete kar sakta hai, aur common berth layout check kar sakta hai. Is prototype mein data kisi server par upload nahi hota. Hum live train location ya PNR access ka jhootha claim nahi karte—woh authorized railway data integration ke baad hi aayega. Humne ek chhoti, testable problem ko privacy aur offline use ke saath solve kiya hai.”
 
 ## The problem
 
-A passenger's journey information is scattered across a booking confirmation, station boards, messages, and memory. At a crowded station, a passenger may need to quickly confirm the boarding station, destination, coach, berth, and departure time. A generic train-status screen does not solve that last-mile information problem, especially with weak connectivity.
+A passenger's journey information is scattered across a booking confirmation, station boards, messages, and memory. At a crowded station, they may need to confirm the boarding station, destination, coach, berth, and departure quickly. A weak connection makes reopening a booking or status page harder.
 
-## Who it is for
+## What works in this build
 
-A passenger preparing for a reserved train journey, particularly someone who wants a readable journey summary and offline access without handing a PNR to an unverified app.
+- Add, edit, share, export, and delete a trip card.
+- Keep saved trip cards in this browser on this device.
+- Reopen the app shell offline after the first online visit on a supported browser.
+- Check berth guidance for common Sleeper and AC 3 Tier numbering.
+- Show a clear boundary: there is no live feed, PNR lookup, IRCTC account connection, or phone sign-in.
 
-## What is built
+## Differentiator
 
-The current MVP lets a passenger add only the trip details they choose, understand a common berth layout, keep the trip on the same device, and export or share a trip card intentionally. It displays an explicit data-status boundary for live feeds and PNR lookup.
+Trust is a product decision. The app does not fill missing railway data with invented train movement, delay, platform, or ticket details. A passenger can use it as a private trip organizer now; live services require written authorization and a secure provider integration.
 
-## Why this approach
+## Likely judge questions
 
-Trust is part of the product. A missing railway feed must look missing; it must never be replaced with made-up train movement, delay, or platform data. The MVP works without account creation, sends no journey data to a server, and is useful as a real offline trip organizer.
+**Why not show live train tracking?**  
+A live indicator without an authorized, current data feed would be misleading. This MVP demonstrates the offline trip workflow; the design separates schedule, live-running, and PNR providers so each can be added with clear source and freshness labels.
 
-## What is next
+**Why is this better than a notes app?**  
+It groups train, route, class, coach, berth, departure, and a common berth guide into a single responsive flow, with explicit offline and privacy behavior. This is an early product hypothesis; it still needs passenger feedback to prove the workflow is clearer.
 
-1. Validate the flow with one real passenger and improve it from their feedback.
-2. Obtain written data-provider terms for schedules, live status, and PNR enquiry.
-3. Add a backend proxy, authentication, retention controls, and privacy/account deletion flows only after the provider and security design are approved.
-4. Ship a signed Android build after Play Console and testing requirements are met.
+**Can users retrieve their IRCTC ticket with phone login?**  
+No. Phone OTP would create a RailSaathi account; it does not grant access to IRCTC bookings. Ticket lookup requires a separately authorized provider and explicit consent.
+
+**What is the next measurable step?**  
+Ask five passengers to complete the add-and-find-my-berth flow, observe where they hesitate, and target a measurable improvement in completion time before adding licensed live data.
+
+## Roadmap
+
+1. Validate the flow with passengers and publish what changed from their feedback.
+2. Obtain written rights for schedules, live running status, and authorized PNR enquiry.
+3. Add a backend proxy, freshness labels, consent, retention controls, and account deletion only after provider terms and a security review.
+4. Build and test the Android application before a Play Store release.
