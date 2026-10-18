@@ -19,7 +19,7 @@ Open index.html in a browser, or host this folder as a static site. Service work
 ### Deploy
 
 - **Netlify:** for a manual deploy, drag this folder into the deploy area. If the GitHub repository contains these files at its root, connect the repository and set the publish directory to `.` (or leave it blank if Netlify treats the repository root as the default).
-- **GitHub Pages:** if these files are at the root of the repository, open **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/(root)`, then save. If you keep the app in a subfolder, configure the deployment to publish that folder instead.
+- **GitHub Pages:** this repository includes a workflow that publishes the root folder on pushes to `main`. Open **Settings → Pages**, choose **GitHub Actions** as the build and deployment source, and save. The first successful workflow run publishes the app at `https://faujisot26-sketch.github.io/railsaathi/`.
 - No build step, API key, or account is needed for this prototype.
 
 ## Privacy boundary
