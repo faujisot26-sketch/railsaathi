@@ -2,6 +2,10 @@
 
 This is a production checklist, not sample train data. Do not show invented train positions, platform numbers, PNR details, or timings as live information.
 
+## Current hackathon MVP
+
+The current repository is a static, offline-first web app. A user can manually add, edit, share, and delete a trip card; see a common berth layout; and export locally saved data. Trip cards stay in browser local storage on the same device. There is no sign-in, cloud sync, real-time status, booking lookup, or PNR integration. The PNR approach selected for the future product is an authorized PNR lookup, but no provider or contract has been selected.
+
 ## Data access
 
 ### Scheduled train and station information
@@ -36,7 +40,7 @@ Startup/MSME pricing has registration and certification conditions. Confirm the 
 
 1. Which authorized provider or contract supplies current schedules, live train movement, and PNR enquiry? IRCTC TIES alone does not list live movement in its current feature set.
 2. Does the owner have the eligible registered entity and budget for the official route, or should we compare licensed commercial providers first?
-3. Should tickets be retrieved by PNR through an authorized service, or should the first release let users save ticket details themselves?
+3. What retention/deletion limits and user consent language are required by the selected provider for PNR responses?
 4. Does the owner already have a Google Play Console and Firebase project?
 
 Keep all train responses labeled with the data provider and last-updated time. If a provider is unavailable, say so; never silently fall back to fabricated live status.
