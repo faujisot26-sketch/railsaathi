@@ -1,6 +1,10 @@
 # RailSaathi
 
-**Your journey, understood.** RailSaathi is an offline-first trip companion for passengers who want their boarding station, destination, coach, berth, and departure details in one clear place.
+**Your journey, understood.** The current build is an offline-first trip companion. Its proposed next direction is Arrival Handoff: helping a passenger and their pickup person coordinate the meeting after the journey.
+
+## Proposed next direction
+
+Arrival Handoff is a product concept, not a feature in the current app. It would let a passenger save and intentionally share a user-entered pickup contact and meeting note with their trip details. See [PRODUCT_DIRECTION.md](PRODUCT_DIRECTION.md) for the idea, demo story, and validation plan.
 
 ## What works now
 
@@ -34,7 +38,8 @@ A production release needs written authorization for train schedules, running st
 
 - index.html — complete responsive app and local trip workflows
 - manifest.webmanifest, sw.js, icon.svg — install and offline app shell
-- PITCH.md — short project story for a demo
+- PITCH.md — project story and judge Q&A
+- PRODUCT_DIRECTION.md — proposed Arrival Handoff concept and validation plan
 - SYSTEM_DESIGN.md — data boundaries and production architecture
 - DEMO_SCRIPT.md — a three-minute walkthrough
 - HACKATHON_CHECKLIST.md — final presentation checklist
